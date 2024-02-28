@@ -21,7 +21,7 @@ test("basic test", async ({ page }) => {
   
   // Assert that the success message is visible
   await expect(
-    page.getByText("Done ! Computer CommitQuality has been created")
+    page.getByText("Done ! Computer Feldco has been created")
   ).toBeVisible();
 });
 
