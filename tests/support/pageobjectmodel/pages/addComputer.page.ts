@@ -1,3 +1,6 @@
+//Page Classes: Each web page is represented by a dedicated class that contains methods to interact with the elements on that page. 
+//For example, you might have a LoginPage class for the login page, a HomePage class for the home page, and so on.
+
 import { Page } from "@playwright/test";
 import ComputerActions from "../sections/computerActions.section";
 import ComputerDetails from "../sections/computerDetails.section";

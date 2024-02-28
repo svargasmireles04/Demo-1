@@ -1,3 +1,6 @@
+//Page Classes: Each web page is represented by a dedicated class that contains methods to interact with the elements on that page. 
+//For example, you might have a LoginPage class for the login page, a HomePage class for the home page, and so on.
+
 import { expect, Page } from "@playwright/test";
 export default class ComputersPage {
   page: Page;
