@@ -11,7 +11,7 @@ test("basic test", async ({ page }) => {
   await page.getByText("Add a new computer").click();
   
   // Fill in the form fields with computer information
-  await page.locator("#name").fill("CommitQuality");
+  await page.locator("#name").fill("Feldco");
   await page.locator("#introduced").fill("1999-12-12");
   await page.locator("#discontinued").fill("2000-12-12");
   await page.locator("#company").selectOption({ label: "Apple Inc." });

@@ -17,7 +17,7 @@ export default class ComputersPage {
   // Locators here
   addComputerButton = () => this.page.getByText("Add a new computer");
   computerAddedLabel = () =>
-    this.page.getByText("Done ! Computer Feldco has been created");
+    this.page.getByText("Done ! Computer Hello has been created");
 
   // Actions
   public async clickAddNewComputer() {
