@@ -6,7 +6,7 @@ export default class ComputersPage {
     this.page = page;
   }
 
-  // I like to add a goto method into each page I create
+  // Add a goto method into each page I create
   public async goto() {
     await this.page.goto("https://computer-database.gatling.io/computers");
   }
