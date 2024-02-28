@@ -21,7 +21,7 @@ export default class ComputerActions {
 
   // Actions
   public async enterComputerDetails() {
-    await this.nameTextbox().fill("CommitQuality");
+    await this.nameTextbox().fill("Feldco");
     await this.introducedTextbox().fill("1999-12-12");
     await this.introducedTextbox().fill("2000-12-12");
     await this.companySelect().selectOption({ label: "Apple Inc." });
