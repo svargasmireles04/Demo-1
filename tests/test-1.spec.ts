@@ -1,0 +1,32 @@
+import { test, expect } from '@playwright/test';
+
+test('test', async ({ page }) => {
+  await page.goto('https://ascend.feldcosales.com/');
+  await page.goto('https://ascend.feldcosales.com/authentication/login?returnUrl=https%3A%2F%2Fascend.feldcosales.com%2F');
+  await page1.goto('https://login.microsoftonline.com/4323732f-f679-49e0-89d2-2f4e3a973322/oauth2/v2.0/authorize?client_id=029279e8-55bb-4751-a704-eb12c338f9c3&scope=api%3A%2F%2F81e687f2-eb3d-4fdf-aef8-8293689fc66b%2FApi.Access%20openid%20offline_access%20profile&redirect_uri=https%3A%2F%2Fascend.feldcosales.com%2Fauthentication%2Flogin-callback&client-request-id=2fa0467a-8c88-47a0-862b-03f1ead04903&response_mode=fragment&response_type=code&x-client-SKU=msal.js.browser&x-client-VER=2.16.1&x-client-OS=&x-client-CPU=&client_info=1&code_challenge=fY6X3tsxo_8Apxqn23ozZEG-q8f91WB1cLJxNE4760M&code_challenge_method=S256&nonce=18f5bf2c-42a7-487e-8b03-8dbf11f3ba16&state=eyJpZCI6IjQxYWNlY2MwLTU4OTktNGZlNy1iMGJjLWYzN2QwOGM5OTZmMCIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicG9wdXAifX0%3D%7CVKmUiLakox_MecmWHVxYjoxoXLA3CyUcERoRaIDguYc');
+  await page1.goto('https://login.microsoftonline.com/4323732f-f679-49e0-89d2-2f4e3a973322/oauth2/v2.0/authorize?client_id=029279e8-55bb-4751-a704-eb12c338f9c3&scope=api%3A%2F%2F81e687f2-eb3d-4fdf-aef8-8293689fc66b%2FApi.Access%20openid%20offline_access%20profile&redirect_uri=https%3A%2F%2Fascend.feldcosales.com%2Fauthentication%2Flogin-callback&client-request-id=2fa0467a-8c88-47a0-862b-03f1ead04903&response_mode=fragment&response_type=code&x-client-SKU=msal.js.browser&x-client-VER=2.16.1&x-client-OS=&x-client-CPU=&client_info=1&code_challenge=fY6X3tsxo_8Apxqn23ozZEG-q8f91WB1cLJxNE4760M&code_challenge_method=S256&nonce=18f5bf2c-42a7-487e-8b03-8dbf11f3ba16&state=eyJpZCI6IjQxYWNlY2MwLTU4OTktNGZlNy1iMGJjLWYzN2QwOGM5OTZmMCIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicG9wdXAifX0%3D%7CVKmUiLakox_MecmWHVxYjoxoXLA3CyUcERoRaIDguYc&sso_reload=true');
+  await page1.getByPlaceholder('someone@example.com').click();
+  await page1.getByPlaceholder('someone@example.com').fill('svargas@4feldco.com');
+  await page1.getByPlaceholder('someone@example.com').press('Tab');
+  await page1.getByRole('link', { name: 'Can’t access your account?' }).press('Enter');
+  await page1.getByRole('button', { name: 'Back' }).click();
+  await page1.getByRole('button', { name: 'Next' }).click();
+  await page1.locator('#i0118').fill('Ln11018163!');
+  await page1.locator('#i0118').press('Enter');
+  await page1.goto('https://login.microsoftonline.com/common/SAS/ProcessAuth');
+  await page1.getByText('Don\'t show this again').click();
+  await page1.getByRole('button', { name: 'Yes' }).click();
+  await page.goto('https://ascend.feldcosales.com/');
+  await page.getByRole('button', { name: 'Search' }).click();
+  await page.getByPlaceholder('Search Customer Id, Name,').click();
+  await page.getByRole('textbox').nth(1).click();
+  await page.getByRole('button', { name: 'Create' }).click();
+  await page.locator('#mud-snackbar-container').getByRole('button').click();
+  await page.getByRole('banner').getByRole('button').nth(3).click();
+  await page.getByRole('banner').getByRole('button').nth(3).click();
+  await page.locator('div').filter({ hasText: /^Bookmarks Manager$/ }).click();
+  await page.locator('.mud-overlay-scrim').click();
+  await page.getByRole('banner').getByRole('button').nth(2).click();
+  await page.getByRole('button', { name: 'Documents' }).click();
+  await page.getByRole('link', { name: 'Lead Times' }).click();
+});
