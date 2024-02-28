@@ -43,3 +43,21 @@ test("basic test with POM", async ({ page }) => {
   // Assert that the new computer is added successfully
   await computersPage.assertNewComputerAdded();
 });
+test("basic test with POM", async ({ page }) => {
+  // Initialize the page objects
+  const computersPage = new ComputersPage(page);
+  const addComputerPage = new AddComputerPage(page);
+  
+  // Navigate to the computers page
+  await computersPage.goto();
+  
+  // Click on the "Add a new computer" button on the computers page
+  await computersPage.clickAddNewComputer();
+  
+  // Fill in the form fields with computer information on the add computer page
+  await addComputerPage.addNewComputer();
+  
+  // Assert that the new computer is added successfully
+  await computersPage.assertNewComputerAdded();
+});
+
